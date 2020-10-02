@@ -39,18 +39,25 @@ function promptUser() {
             {
                 type: "list",
                 message: "Choose a license",
-                choices: "License 1",
+                choices: [
+                    "License 1",
+                    "license 2"
+                ],
                 name: "license"
+            },
+            {
+                type: "input",
+                message: "Enter your GitHub username",
+                name: "github"
+            },
+            {
+                type: "input",
+                message: "Enter your emai address",
+                name: "email"
             }
         ]);
 
     `
-        WHEN I choose a license for my application from a list of options
-        THEN a badge for that license is added hear the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-        WHEN I enter my GitHub username
-        THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-        WHEN I enter my email address
-        THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
         WHEN I click on the links in the Table of Contents
         THEN I am taken to the corresponding section of the README
         `
@@ -59,23 +66,45 @@ function promptUser() {
 
 function createReadme(answers) {
     return `
-    # Title
+# Title
 
-    ## Description
+<a name="description"/>
 
-    ## Table of Contents
+## Description 
 
-    ## Installation
+## Table of Contents
 
-    ## Usage
+[Description](#description)
+[Installation](#installation)
+[Usage](#usage)
+[License](#license)
+[Contributing](#contributing)
+[Tests](#tests)
+[Questions](#questions)
 
-    ## License
+<a name="installation"/>
 
-    ## Contributing
+## Installation
 
-    ## Tests
+<a name="usage"/>
 
-    ## Questions
+## Usage 
+
+<a name="license"/>
+
+## License 
+
+<a name="contributing"/>
+
+## Contributing 
+
+<a name="tests"/>
+
+## Tests 
+
+<a name="questions"/>
+
+## Questions 
 
     `
 }
