@@ -29,12 +29,12 @@ function promptUser() {
             {
                 type: "input",
                 message: "Who contributed to this project?",
-                name: "contributed"
+                name: "contributing"
             },
             {
                 type: "input",
                 message: "Enter test parameters",
-                name: "test"
+                name: "tests"
             },
             {
                 type: "list",
@@ -56,21 +56,13 @@ function promptUser() {
                 name: "email"
             }
         ]);
-
-    `
-        WHEN I click on the links in the Table of Contents
-        THEN I am taken to the corresponding section of the README
-        `
-
 }
 
 function createReadme(answers) {
     return `
 # Title
 
-<a name="description"/>
-
-## Description 
+${answers.title}
 
 ## Table of Contents
 
@@ -82,31 +74,49 @@ function createReadme(answers) {
 [Tests](#tests)
 [Questions](#questions)
 
+<a name="description"/>
+
+## Description 
+
+${answers.description}
+
 <a name="installation"/>
 
 ## Installation
+
+${answers.installation}
 
 <a name="usage"/>
 
 ## Usage 
 
+${answers.usage}
+
 <a name="license"/>
 
 ## License 
+
+${answers.license}
 
 <a name="contributing"/>
 
 ## Contributing 
 
+${answers.contributing}
+
 <a name="tests"/>
 
 ## Tests 
+
+${answers.tests}
 
 <a name="questions"/>
 
 ## Questions 
 
-    `
+${answers.github}
+${answers.email}
+`
 }
 
 async function init() {
