@@ -70,10 +70,11 @@ function promptUser() {
 }
 
 function createReadme(answers) {
+    let newLicense = answers.license;
     return `
 # ${answers.title}
 
-![GitHub](https://img.shields.io/badge/license-${answers.license.replace(" ", "%20")}-green)
+![GitHub](https://img.shields.io/badge/license-${newLicense.replace(" ", "%20")}-green)
 
 ## Table of Contents
 
