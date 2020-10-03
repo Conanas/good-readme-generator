@@ -18,7 +18,7 @@ function promptUser() {
             },
             {
                 type: "input",
-                message: "Enter project insatallation instructions",
+                message: "Enter project installation instructions",
                 name: "installation"
             },
             {
@@ -73,7 +73,7 @@ function createReadme(answers) {
     return `
 # ${answers.title}
 
-![GitHub](https://img.shields.io/badge/license-${answers.license}-green)
+![GitHub](https://img.shields.io/badge/license-${answers.license.replace(" ", "%20")}-green)
 
 ## Table of Contents
 
