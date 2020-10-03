@@ -127,8 +127,8 @@ ${answers.tests}
 
 ## Questions 
 
-<https://github.com/${answers.github}>
-<${answers.email}>
+Here is my GitHub portfolio page: <https://github.com/${answers.github}>
+Any Questions then please email me at: <${answers.email}>
 `
 }
 
