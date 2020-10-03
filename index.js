@@ -28,12 +28,12 @@ function promptUser() {
             },
             {
                 type: "input",
-                message: "Who contributed to this project?",
+                message: "Enter the contribution guidelines",
                 name: "contributing"
             },
             {
                 type: "input",
-                message: "Enter test parameters",
+                message: "Enter the test instructions",
                 name: "tests"
             },
             {
