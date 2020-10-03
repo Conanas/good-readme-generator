@@ -40,8 +40,19 @@ function promptUser() {
                 type: "list",
                 message: "Choose a license",
                 choices: [
-                    "License 1",
-                    "license 2"
+                    "Apache License 2.0",
+                    "GNU General Public License v3.0",
+                    "MIT License",
+                    "BSD 2-Clause 'Simplified' License",
+                    'BSD 3-Clause "New" or "Revised" License',
+                    "Boost Software License 1.0",
+                    "Creative Commons Zero v1.0 Universal",
+                    "Eclipse Public License 2.0",
+                    "GNU Affero General Public License v3.0",
+                    "GNU General Public License v2.0",
+                    "GNU Lesser General Public License v2.1",
+                    "Mozilla Public License 2.0",
+                    "The Unlicense"
                 ],
                 name: "license"
             },
@@ -61,6 +72,8 @@ function promptUser() {
 function createReadme(answers) {
     return `
 # Title
+
+![GitHub](https://img.shields.io/badge/license-${answers.license}-green)
 
 ${answers.title}
 
@@ -114,8 +127,8 @@ ${answers.tests}
 
 ## Questions 
 
-${answers.github}
-${answers.email}
+<https://github.com/${answers.github}>
+<${answers.email}>
 `
 }
 
