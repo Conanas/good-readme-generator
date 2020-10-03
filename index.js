@@ -85,7 +85,7 @@ function createReadme(answers) {
     return `
 # ${title}
 
-![GitHub](https://img.shields.io/badge/license-${license.replace(" ", "%20")}-green)
+![GitHub](https://img.shields.io/badge/license-${license.replace(/ /g, "%20")}-green)
 
 ## Table of Contents
 
