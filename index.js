@@ -70,11 +70,22 @@ function promptUser() {
 }
 
 function createReadme(answers) {
-    let newLicense = answers.license;
-    return `
-# ${answers.title}
+    let {
+        title,
+        description,
+        installation,
+        usage,
+        license,
+        contributing,
+        tests,
+        github,
+        email
+    } = answers;
 
-![GitHub](https://img.shields.io/badge/license-${newLicense.replace(" ", "%20")}-green)
+    return `
+# ${title}
+
+![GitHub](https://img.shields.io/badge/license-${license.replace(" ", "%20")}-green)
 
 ## Table of Contents
 
@@ -90,44 +101,44 @@ function createReadme(answers) {
 
 ## Description 
 
-${answers.description}
+${description}
 
 <a name="installation"></a>
 
 ## Installation
 
-${answers.installation}
+${installation}
 
 <a name="usage"></a>
 
 ## Usage 
 
-${answers.usage}
+${usage}
 
 <a name="license"></a>
 
 ## License 
 
-${answers.license}
+${license}
 
 <a name="contributing"></a>
 
 ## Contributing 
 
-${answers.contributing}
+${contributing}
 
 <a name="tests"></a>
 
 ## Tests 
 
-${answers.tests}
+${tests}
 
 <a name="questions"></a>
 
 ## Questions 
 
-Here is my GitHub portfolio page: <https://github.com/${answers.github}>
-Any Questions then please email me at: <${answers.email}>
+Here is my GitHub portfolio page: <https://github.com/${github}>
+Any Questions then please email me at: <${email}>
 `
 }
 
