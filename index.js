@@ -71,11 +71,9 @@ function promptUser() {
 
 function createReadme(answers) {
     return `
-# Title
+# ${answers.title}
 
 ![GitHub](https://img.shields.io/badge/license-${answers.license}-green)
-
-${answers.title}
 
 ## Table of Contents
 
@@ -87,43 +85,43 @@ ${answers.title}
 [Tests](#tests)
 [Questions](#questions)
 
-<a name="description"/>
+<a name="description"></a>
 
 ## Description 
 
 ${answers.description}
 
-<a name="installation"/>
+<a name="installation"></a>
 
 ## Installation
 
 ${answers.installation}
 
-<a name="usage"/>
+<a name="usage"></a>
 
 ## Usage 
 
 ${answers.usage}
 
-<a name="license"/>
+<a name="license"></a>
 
 ## License 
 
 ${answers.license}
 
-<a name="contributing"/>
+<a name="contributing"></a>
 
 ## Contributing 
 
 ${answers.contributing}
 
-<a name="tests"/>
+<a name="tests"></a>
 
 ## Tests 
 
 ${answers.tests}
 
-<a name="questions"/>
+<a name="questions"></a>
 
 ## Questions 
 
