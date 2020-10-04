@@ -150,7 +150,7 @@ async function init() {
 
         await writeFileAsync("README.md", readme);
 
-        console.log("Successfully created Readme");
+        console.log("Successfully generated Good-Readme!");
     } catch (error) {
         console.log(`Error: ${error}`);
     }
