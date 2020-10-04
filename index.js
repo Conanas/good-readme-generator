@@ -66,7 +66,7 @@ function promptUser() {
             },
             {
                 type: "input",
-                message: "Enter your emai address",
+                message: "Enter your email address",
                 name: "email"
             }
         ]);
@@ -74,7 +74,7 @@ function promptUser() {
 
 // creates the readme using the answers from the promptUser function
 function createReadme(answers) {
-    // destructure answers object into variables
+    // de-structure answers object into variables
     let {
         title,
         description,
