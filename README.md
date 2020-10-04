@@ -34,7 +34,4 @@ README includes table of contents with clickable links to each corresponding sec
 
 ## Video Demonstration
 
-
-
-## Screenshots
-
+https://drive.google.com/file/d/1YB9eSsoKA-RyHINtjFhPz4d_LSqSnygY/view?usp=sharing
