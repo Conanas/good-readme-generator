@@ -1,6 +1,6 @@
 // required modules for file
-const promptUser = require("./promptUser");
-const createReadme = require("./createReadme");
+const promptUser = require("./prompt-user");
+const createReadme = require("./create-readme");
 
 // required installs for project
 const fs = require("fs");
