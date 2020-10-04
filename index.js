@@ -1,9 +1,12 @@
+// required installs for project
 const fs = require("fs");
 const util = require("util");
 const inquirer = require("inquirer");
 
+// promisified asynchronous write file declaration
 const writeFileAsync = util.promisify(fs.writeFile);
 
+// prompts the user for inputs to be transferred into the readme
 function promptUser() {
     return inquirer
         .prompt([{
@@ -69,7 +72,9 @@ function promptUser() {
         ]);
 }
 
+// creates the readme using the answers from the promptUser function
 function createReadme(answers) {
+    // destructure answers object into variables
     let {
         title,
         description,
@@ -82,6 +87,7 @@ function createReadme(answers) {
         email
     } = answers;
 
+    // the template literal string with inserted variables to be returned to be written to the readme.md file
     return `
 # ${title}
 
@@ -142,6 +148,10 @@ Any Questions then please email me at: <${email}>
 `
 }
 
+// initialise function
+// calls the promptUser function and waits for the user to complete the inputs
+// calls the createReadme function with the answers from the promptUser to generate the readme
+// writes the returned string from createReadme function to README.md
 async function init() {
     try {
         const answers = await promptUser();
@@ -156,4 +166,5 @@ async function init() {
     }
 }
 
+// calls the initial function
 init();
