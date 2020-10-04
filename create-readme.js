@@ -69,7 +69,7 @@ ${tests}
 
 ## Questions 
 
-Here is my GitHub portfolio page: <https://github.com/${github}>
+Here is my GitHub portfolio page: <https://github.com/${github}><br>
 Any Questions then please email me at: <${email}>
 `
 }
