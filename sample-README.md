@@ -53,5 +53,5 @@ Use the Jest testing library for testing of the application
 
 ## Questions 
 
-Here is my GitHub portfolio page: <https://github.com/Conanas>
+Here is my GitHub portfolio page: <https://github.com/Conanas><br>
 Any Questions then please email me at: <tmhaigh@gmail.com>
