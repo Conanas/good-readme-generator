@@ -1,10 +1,10 @@
-// required modules for file
-const promptUser = require("./prompt-user");
-const createReadme = require("./create-readme");
-
 // required installs for project
 const fs = require("fs");
 const util = require("util");
+
+// required modules for file
+const promptUser = require("./prompt-user");
+const createReadme = require("./create-readme");
 
 // promisified asynchronous write file declaration
 const writeFileAsync = util.promisify(fs.writeFile);
